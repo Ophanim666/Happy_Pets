@@ -1,0 +1,58 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block js %}
+{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block contenido %}
+</section>
+<section id="Bienvenidos">
+    <h2>BIENVENIDOS A HAPPY PETS</h2>
+    <p>Happy Pets es una tienda de productos para mascotas que apoya a una fundacion de ayuda a los animales nesecitados sin fines de lucro.</p>
+</section>
+<section id="blog">
+    <h3>Lo ultimo de nuestro blog</h3>
+    <div class="contenedor">
+        <article>
+            <img src="{% static 'app/img/INICIO/blog_img1.jpg' %}">
+            <h4>Tomy fue un rescatadon, hoy esta con una familia amorosa</h4>
+        </article>
+        <article>
+            <img src="{% static 'app/img/INICIO/blog_img2.jpg' %}">
+            <h4>Julieta en su nueva familia que la ama</h4>
+        </article>
+        <article>
+            <img src="{% static 'app/img/INICIO/blog_img3.jpg' %}">
+            <h4>Rex junto a su nuevo amigo en su nueva casa</h4>
+        </article>
+    </div>
+</section>
+
+<section id="info">
+    <h3>Para nosotros la calidad en los productos que usamos es importante para entregarte el mejor servicio</h3>
+    <div class="contenedor">
+        <div class="info-productos">
+            <img src="{% static 'app/img/INICIO/info_inicio1.jpg' %}" alt="">
+            <h4>Peto para perros de estura media lineas rojas</h4>
+        </div>
+        <div class="info-productos">
+            <img src="{% static 'app/img/INICIO/info_inicio2.jpg' %}" alt="">
+            <h4>Corea para gatos celeste</h4>
+        </div>
+        <div class="info-productos">
+            <img src="{% static 'app/img/INICIO/info_inicio3.jpg' %}" alt="">
+            <h4>Correa para perros de estatura media color reflex </h4>
+        </div>
+        <div class="info-productos">
+            <img src="{% static 'app/img/INICIO/info_inicio4.jpg' %}" alt="">
+            <h4>Petos caparazon de tortuga para gatos</h4>
+        </div>
+
+    </div>
+
+</section>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block js %}
+{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block contenido %}
+
+<section id="Bienvenidos">
+    <h2>PRODUCTOS HAPPY PETS</h2>
+    <p>Los productos de Happy pets estan hechos para brindar la mayor comodidad y felicidad a sus mascotas</p>
+</section>
+<section id="blog">
+    <h3>Lo ultimo de nuestros productos</h3>
+    <div class="contenedor">
+        <article>
+            <img src="{% static 'app/img/PRODUCTOS/producto_grande1.jpg' %}">
+            <h4>Correa diseño de rosas para perro</h4>
+        </article>
+        <article>
+            <img src="{% static 'app/img/PRODUCTOS/producto_grande2.jpg' %}">
+            <h4>Collar cuero para gato</h4>
+        </article>
+        <article>
+            <img src="{% static 'app/img/PRODUCTOS/producto_grande3.jpg' %}">
+            <h4>Arnes negro para perro pequeño</h4>
+        </article>
+    </div>
+</section>
+
+<section id="info">
+    <h3>Para nosotros la calidad en los productos que usamos es importante para entregarte el mejor servicio</h3>
+    <div class="contenedor">
+        <div class="info-productos">
+            <img src="{% static 'app/img/PRODUCTOS/producto_abajo1.jpg' %}" alt="">
+            <h4>Correa de cuero para gatos</h4>
+        </div>
+        <div class="info-productos">
+            <img src="{% static 'app/img/PRODUCTOS/producto_abajo2.jpe' %}g" alt="">
+            <h4>Peto para gatos dos colores</h4>
+        </div>
+        <div class="info-productos">
+            <img src="{% static 'app/img/PRODUCTOS/producto_abajo3.jpg' %}" alt="">
+            <h4>Mordedor diseño hueso para perros</h4>
+        </div>
+        <div class="info-productos">
+            <img src="{% static 'app/img/PRODUCTOS/producto_abajo4.jpg' %}" alt="">
+            <h4>Collar de cuero para perro mediano</h4>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

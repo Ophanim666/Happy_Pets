@@ -1,0 +1,66 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<section id="Bienvenidos">
+    <h2>AGREGAR OFERTAS DE PRODUCTOS A LA TIENDA</h2>
+    <p>FORMULARIO PARA PODER AGREGAR OFERTAS DE PRODUCTOS A LA TIENDA PARA LOS CLIENTES</p>
+</section>
+
+
+        <div class="row">
+            <div class="col-10 col-md-2 offset-md-4">
+
+                <div class="card">
+                    <div class="card-body">
+
+                <form action="" method="post" enctype="multipart/form-data">
+
+                    {% csrf_token %}
+
+                    {{ forms }}
+
+                    <br>
+                    <br>
+                    <div class="d-flex justify-content-center">
+
+                        <input type="reset" value="Cancelar" class="btn btn-secondary">
+                        &nbsp;
+                        <input type="submit" value="Guardar" class="btn btn-primary">
+
+                    </div>
+                </form>
+                {{ mensaje }}
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<section id="info">
+    <h3>FELICES HAPPY PETS</h3>
+    <div class="contenedor">
+        <div class="info-productos">
+            <img src="{% static 'app/img/BLOG/blog_abajo1.jpg' %}" alt="">
+            <h4>Los hermanos tom y luna con sus nuevos amigos</h4>
+        </div>
+        <div class="info-productos">
+            <img src="{% static 'app/img/BLOG/blog_abajo2.jpg' %}" alt="">
+            <h4>El serio luis con sus nuevos amigos</h4>
+        </div>
+        <div class="info-productos">
+            <img src="{% static 'app/img/BLOG/blog_abajo3.jpg' %}" alt="">
+            <h4>Chop encontro a su nuevo compañero</h4>
+        </div>
+        <div class="info-productos">
+            <img src="{% static 'app/img/BLOG/blog_abajo4.jpg' %}" alt="">
+            <h4>Kira encontro a su nueva mejor amiga</h4>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS only Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'app/css/fontello.css' %}">
+    <link rel="stylesheet" href= "{% static 'app/css/estilos.css' %}">
+
+
+
+
+    <title>Inicio de session</title>
+</head>
+<body>
+
+    <header>
+        <div class="Contenedor">
+            <h1 class="icon-won">Happy Pets</h1>
+            <input type="checkbox" id="menu-bar">
+            <label class="icon-menu" for="menu-bar"></label>
+            <nav class="menu">
+            </nav>
+        </div>
+    </header>
+
+
+
+    <section id="banner">
+        <img src="{% static 'app/img/Perro_pagina_principal.jpg' %}">
+        <div class="contenedor">
+           <h2>Las Mascotas son amor para nuestras vidas</h2>
+           <p>¿Y tu, que esperas encontrar la tu ya?</p>
+        </div>
+    </section>
+
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-8 col-md-12 offset-md-4">
+                <h2>Ingrese sus datos de Inicio</h2>
+            </div>
+            <div class="col-10 col-md-8 offset-md-2">
+                <div class="card">
+                    <div class="card-body">
+                        <hr>
+                        <form action="" method="post">
+
+                            {% csrf_token %}
+
+                            {{ form }}
+
+                            <br>
+                            <br>
+                            <a href="{% url 'home' %}">HOME</a> |
+                            <a href="{% url 'registro' %}">REGISTRARSE</a>
+                            <input type="submit" value="ingresar">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+
+    <section id="info">
+        <h3>FELICES HAPPY PETS</h3>
+        <div class="contenedor">
+            <div class="info-productos">
+                <img src="{% static 'app/img/BLOG/blog_abajo1.jpg' %}" alt="">
+                <h4>Los hermanos tom y luna con sus nuevos amigos</h4>
+            </div>
+            <div class="info-productos">
+                <img src="{% static 'app/img/BLOG/blog_abajo2.jpg' %}" alt="">
+                <h4>El serio luis con sus nuevos amigos</h4>
+            </div>
+            <div class="info-productos">
+                <img src="{% static 'app/img/BLOG/blog_abajo3.jpg' %}" alt="">
+                <h4>Chop encontro a su nuevo compañero</h4>
+            </div>
+            <div class="info-productos">
+                <img src="{% static 'app/img/BLOG/blog_abajo4.jpg' %}" alt="">
+                <h4>Kira encontro a su nueva mejor amiga</h4>
+            </div>
+    
+        </div>
+    
+    </section>
+
+    
+    <footer>
+        <div class="contenedor">
+            <p class="copy">Happy pets &copy; 2022</p>
+            <div class="sociales">
+                <a class="icon-facebook"href="#!"></a>
+                <a class="icon-twitter" href="#!"></a>
+                <a class="icon-instagram" href="#!"></a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

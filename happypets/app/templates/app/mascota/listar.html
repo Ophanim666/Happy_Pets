@@ -1,0 +1,76 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+<div class="card">
+    <div class="card-body">
+        <h2>Productos en ofeta</h2>
+        <table class="table table-striped table-hover table-responsive-sm">
+            <tr>
+        
+                <th>Especie</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Fecha</th>
+                <th>Opciones</th>
+        
+            </tr>
+        
+            {% for m in mascota %}
+        
+            <tr>
+                <td>{{ m.especie | title }}</td>
+                <td>{{ m.nombre }}</td>
+                <td>{{ m.descripcion | title }}</td>
+                <td>{{ m.fecha_rescate | title }}</td>
+                <td>
+                    {% if perms.app.change_producto %}
+                    
+                    <a href="{% url 'modificar_mascota' m.id %}" class="btn btn-info">Modificar</a>
+                    
+                    {% endif %}
+
+                    {% if perms.app.delete_producto %}
+                    
+                    <a href="{% url 'eliminar_mascota' m.id %}" class="btn btn-danger">Eliminar</a>
+                    
+                    {% endif %}
+                
+                </td> 
+        
+            </tr>
+        
+            {% endfor %}
+        
+        </table>
+    </div>
+</div>
+
+
+
+<section id="info">
+    <h3>FELICES HAPPY PETS</h3>
+    <div class="contenedor">
+        <div class="info-productos">
+            <img src="{% static 'app/img/BLOG/blog_abajo1.jpg' %}" alt="">
+            <h4>Los hermanos tom y luna con sus nuevos amigos</h4>
+        </div>
+        <div class="info-productos">
+            <img src="{% static 'app/img/BLOG/blog_abajo2.jpg' %}" alt="">
+            <h4>El serio luis con sus nuevos amigos</h4>
+        </div>
+        <div class="info-productos">
+            <img src="{% static 'app/img/BLOG/blog_abajo3.jpg' %}" alt="">
+            <h4>Chop encontro a su nuevo compañero</h4>
+        </div>
+        <div class="info-productos">
+            <img src="{% static 'app/img/BLOG/blog_abajo4.jpg' %}" alt="">
+            <h4>Kira encontro a su nueva mejor amiga</h4>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

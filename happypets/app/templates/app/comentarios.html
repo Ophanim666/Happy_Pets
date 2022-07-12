@@ -1,0 +1,57 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block js %}
+<script src="app/js/map.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block contenido %}
+<section id="Bienvenidos">
+    <h2>MANTENTE INFORMADO DE LO QUE SUCEDE EN HAPPY PETS</h2>
+    <p>Aqui se encuentra ubicado el refugio al cual estamos asociados y brindamos apoyo</p>
+</section>
+<section id="comentarios">
+    <div class="col-10 col-md-8 offset-md-4">
+    <h5>Ubicacion del refugio asociado</h5>
+    </div>
+    <div class="contenedor">
+        <div class="col-10 col-md-8 offset-md-4">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.077690870305!2d-70.65978848487063!3d-33.44728238077488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c507f91be917%3A0xcfac72a68dd4b986!2sDuoc%20UC%20-%20Sede%20Padre%20Alonso%20de%20Ovalle!5e0!3m2!1ses!2scl!4v1649350072384!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
+        </div>
+    </div>
+</section>
+
+<section id="info">
+    <h3>FELICES HAPPY PETS</h3>
+    <div class="contenedor">
+        <div class="info-productos">
+            <img src="{% static 'app/img/BLOG/blog_abajo1.jpg' %}" alt="">
+            <h4>Los hermanos tom y luna con sus nuevos amigos</h4>
+        </div>
+        <div class="info-productos">
+            <img src="{% static 'app/img/BLOG/blog_abajo2.jpg' %}" alt="">
+            <h4>El serio luis con sus nuevos amigos</h4>
+        </div>
+        <div class="info-productos">
+            <img src="{% static 'app/img/BLOG/blog_abajo3.jpg' %}" alt="">
+            <h4>Chop encontro a su nuevo compañero</h4>
+        </div>
+        <div class="info-productos">
+            <img src="{% static 'app/img/BLOG/blog_abajo4.jpg' %}" alt="">
+            <h4>Kira encontro a su nueva mejor amiga</h4>
+        </div>
+
+    </div>
+
+</section>
+{% endblock %}
